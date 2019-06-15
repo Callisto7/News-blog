@@ -38,3 +38,15 @@
   height: 96px;
   border-radius: 50%;
 }
+
+.form-group-invalid {
+
+  label, .invalid-feedback {
+    color: red;
+  }
+
+  input, select {
+    border-color: red;
+  }
+
+}

@@ -8,4 +8,6 @@ class User < ApplicationRecord
   GENDERS = %w[male female].freeze
   enum role: ROLES
   enum gender: GENDERS
+
+  validates :first_name, :last_name, :role, :gender, presence: true
 end
