@@ -9,5 +9,11 @@ class User < ApplicationRecord
   enum role: ROLES
   enum gender: GENDERS
 
+  has_many :posts
+
   validates :first_name, :last_name, :role, :gender, presence: true
+
+  def name
+    "#{first_name} #{last_name}"
+  end
 end

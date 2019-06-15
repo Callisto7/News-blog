@@ -1,5 +1,6 @@
-%h1 Editing Post
-= render 'form', post: @post
-= link_to 'Show', @post
-|
-= link_to 'Back', posts_path
+.edit-post
+  %h1 Редактировать новость
+  = render 'form', post: @post do |f|
+    = f.submit 'Сохранить', class: 'btn btn-primary'
+    = link_to 'Показать полностью', @post, class: 'back btn btn-success'
+    = link_to 'Назад', posts_path, class: 'back  btn btn-default'

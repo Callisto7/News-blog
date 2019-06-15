@@ -25,3 +25,9 @@ ru:
               blank: ^Введите пароль
             password_confirmation:
               confirmation: ^Введенный пароль не совпадает
+        post:
+          attributes:
+            title:
+              blank: ^Введите заголовок
+            text:
+              blank: ^Введите текст

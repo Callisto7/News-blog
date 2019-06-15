@@ -1,3 +1,5 @@
-%h1 New Post
-= render 'form', post: @post
-= link_to 'Back', posts_path
+.new-post
+  %h1.text-center Добавить новость
+  = render 'form', post: @post do |f|
+    = f.submit 'Добавить', class: 'btn btn-primary'
+    = link_to 'Назад', posts_path, class: 'back btn btn-default'

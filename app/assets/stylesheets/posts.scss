@@ -1,3 +1,57 @@
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.new-post, .edit-post, .show-post {
+  .actions {
+    .back {
+      float: right;
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+}
+
+.edit-post {
+  .actions {
+    .btn-success {
+      margin-left: 5px;
+    }
+  }
+}
+
+.show-post, .index-post {
+  p {
+    white-space: pre-wrap;
+  }
+}
+
+.index-post {
+  .post {
+    border-top: 1px solid grey;
+    margin-top: 10px;
+    padding: 10px 0;
+
+    .date-time, .author {
+      display: block;
+      color: #afafaf;
+      font-size: 12px;
+    }
+  }
+
+  .title {
+    text-transform: uppercase;
+  }
+
+  .new {
+    background-color: coral;
+  }
+
+  .actions {
+    text-align: right;
+  }
+
+  .edit {
+    background-color: blueviolet;
+  }
+}
+
+
