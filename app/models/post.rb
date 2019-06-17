@@ -1,9 +1,8 @@
 class Post < ApplicationRecord
+  include Dateable
+
   belongs_to :user
+  has_many :comments
 
   validates :title, :text, presence: true
-
-  def created_date
-    created_at.in_time_zone(Time.zone.name).strftime('%H:%M %d.%m.%Y')
-  end
 end

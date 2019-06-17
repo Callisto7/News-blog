@@ -6,3 +6,22 @@
   .actions
     = link_to 'Редактировать', edit_post_path(@post), class: 'btn btn-primary'
     = link_to 'Назад', posts_path, class: 'back btn btn-default'
+
+.comments
+  %h4 Комментарии
+  %hr
+
+  = simple_form_for @comment do |f|
+    = f.input :post_id, label: false, input_html: { type: 'hidden', value: @post.id }
+    = f.input :text, placeholder: 'Оставьте свой комментарий...', label: false, required: false, input_html: { rows: '5' }
+
+    .actions
+      = f.submit 'Комментировать', class: 'btn comment btn-primary'
+
+  - @comments.each do |comment|
+    .panel.panel-primary
+      .panel-heading
+        = comment.user.name
+        = comment.created_date
+      .panel-footer
+        = comment.text

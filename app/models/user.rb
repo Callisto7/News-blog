@@ -10,6 +10,7 @@ class User < ApplicationRecord
   enum gender: GENDERS
 
   has_many :posts
+  has_many :comments
 
   validates :first_name, :last_name, :role, :gender, presence: true
 
