@@ -49,16 +49,24 @@
   }
 
   .new {
+    background-color: coral;
+    border-color: #ffffff;
+
+    &:active {
       background-color: coral;
-      border-color: #ffffff;
-    }
-
-    .actions {
-      text-align: right;
-    }
-
-    .edit {
-      background-color: blueviolet;
-      border-color: #ffffff;
     }
   }
+
+  .actions {
+    text-align: right;
+  }
+
+  .edit {
+    background-color: blueviolet;
+    border-color: #ffffff;
+
+    &:active {
+      background-color: blueviolet;
+    }
+  }
+}
