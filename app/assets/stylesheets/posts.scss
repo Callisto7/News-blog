@@ -25,6 +25,12 @@
 }
 
 .index-post {
+  .p, .alert-success {
+    padding: 5px;
+    margin-bottom: 10px;
+    float: right;
+  }
+
   .post {
     border-top: 1px solid grey;
     margin-top: 10px;
@@ -39,19 +45,20 @@
 
   .title {
     text-transform: uppercase;
+    font-family: "Noto Sans Mono CJK JP Bold";
   }
 
   .new {
-    background-color: coral;
+      background-color: coral;
+      border-color: #ffffff;
+    }
+
+    .actions {
+      text-align: right;
+    }
+
+    .edit {
+      background-color: blueviolet;
+      border-color: #ffffff;
+    }
   }
-
-  .actions {
-    text-align: right;
-  }
-
-  .edit {
-    background-color: blueviolet;
-  }
-}
-
-

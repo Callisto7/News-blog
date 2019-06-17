@@ -6,11 +6,21 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{ href: '#' } Brand
+      %a.navbar-brand{ href: '#' } CALLISTO
     #navbar-news-blog.collapse.navbar-collapse
-      %ul.nav.navbar-nav
+      %ul.nav.navbar-nav.navbar-center
         %li
-          = active_link_to 'News', posts_path
+          = active_link_to 'Новости', posts_path
+        %li
+          = link_to 'Кино', '#'
+        %li
+          = link_to 'Спорт', '#'
+        %li
+          = link_to 'Кино', '#'
+        %li
+          = link_to 'Политика', '#'
+        %li
+          = link_to 'Наука и техника', '#'
       %ul.nav.navbar-nav.navbar-right
         %li
           - if user_signed_in?

@@ -1,6 +1,6 @@
 .index-post
-  %p#notice= notice
   %h1.text-center.title Новости
+  %p.alert.alert-success#notice= notice
   = link_to 'Добавить новость', new_post_path, class: 'new btn btn-primary'
   - @posts.each do |post|
     .post

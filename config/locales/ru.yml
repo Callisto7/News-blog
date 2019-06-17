@@ -4,6 +4,14 @@ ru:
       male: Мужской
       female: Женский
 
+  posts:
+    update:
+      notice: Новость обновлена.
+    create:
+      notice: Новость добавлена.
+    destroy:
+      notice: Новость удалена.
+
   activerecord:
     errors:
       models:

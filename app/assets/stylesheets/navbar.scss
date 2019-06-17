@@ -1,0 +1,38 @@
+.navbar-default {
+  border-top: 3px solid #ec0000;
+  border-radius: 0;
+
+  .navbar-nav > li > a {
+    color: black;
+    font-weight: 600;
+  }
+  .navbar-right > li > a:hover{
+    color: dodgerblue;
+    border-bottom: 1px solid #F21F1F;
+  }
+
+  .navbar-brand:hover {
+    color: black;
+  }
+  .navbar-brand {
+    color: #000;
+    font-weight: 700;
+    font-family: 'Courier New';
+    font-size: xx-large;
+  }
+
+  .navbar-center > li {
+    text-align: center;
+    a:hover {
+      color: #F21F1F;
+      border-bottom: 1px solid #F21F1F;
+    }
+
+    a.active {
+      color: #F21F1F;
+      border-bottom: 1px solid #F21F1F;
+      font-weight: 600;
+      margin-right: 5px;
+    }
+  }
+}
