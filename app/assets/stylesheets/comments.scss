@@ -1,4 +1,10 @@
 .comments {
+  .panel-heading {
+    .delete-comment {
+      float: right;
+      color: white;
+    }
+  }
 
   h4 {
     padding-top: 50px;
@@ -8,17 +14,11 @@
 
   textarea {
     resize: none;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-radius: 0;
   }
 
   .actions {
     .comment {
-      background-color: red;
       border-color: inherit;
-      border-radius: 0px;
       margin-bottom: 20px;
       color: white;
     }

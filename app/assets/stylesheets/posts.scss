@@ -19,28 +19,23 @@
 }
 
 .show-post, .index-post {
+  .date-time, .author {
+    display: block;
+    color: #afafaf;
+    font-size: 12px;
+  }
+
   p {
     white-space: pre-wrap;
+    word-wrap: break-word;
   }
 }
 
 .index-post {
-  .p, .alert-success {
-    padding: 5px;
-    margin-bottom: 10px;
-    float: right;
-  }
-
   .post {
     border-top: 1px solid grey;
     margin-top: 10px;
     padding: 10px 0;
-
-    .date-time, .author {
-      display: block;
-      color: #afafaf;
-      font-size: 12px;
-    }
   }
 
   .title {

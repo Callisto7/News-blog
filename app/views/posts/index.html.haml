@@ -1,6 +1,5 @@
 .index-post
   %h1.text-center.title Новости
-  %p.alert.alert-success#notice= notice
   = link_to 'Добавить новость', new_post_path, class: 'new btn btn-primary'
   - @posts.each do |post|
     .post
@@ -9,7 +8,7 @@
           = link_to 'Редактировать', edit_post_path(post), class: 'edit btn btn-primary'
         - if current_user&.admin?
           = link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'delete btn btn-danger'
-      %h1= post.title
+      %h1= link_to post.title, post_path(post)
       %p= truncate(to_html(post.text), length: 200) { link_to 'Показать полностью', post_path(post) }
       %span.date-time Добавлено: #{post.created_date}
       %span.author Автор: #{post.user.name}

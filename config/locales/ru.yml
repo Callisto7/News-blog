@@ -12,6 +12,7 @@ ru:
     destroy:
       notice: Новость удалена.
 
+
   activerecord:
     errors:
       models:
@@ -39,3 +40,7 @@ ru:
               blank: ^Введите заголовок
             text:
               blank: ^Введите текст
+        comment:
+          attributes:
+            text:
+              blank: ^Комментарий не может быть пустым

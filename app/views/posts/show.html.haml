@@ -1,6 +1,7 @@
 .show-post
-  %p#notice= notice
   %h1= @post.title
+  %span.date-time Добавлено: #{@post.created_date}
+  %span.author Автор: #{@post.user.name}
   %p= to_html(@post.text)
 
   .actions
@@ -16,12 +17,14 @@
     = f.input :text, placeholder: 'Оставьте свой комментарий...', label: false, required: false, input_html: { rows: '5' }
 
     .actions
-      = f.submit 'Комментировать', class: 'btn comment btn-primary'
+      = f.submit 'Комментировать', class: 'btn comment btn-success'
 
-  - @comments.each do |comment|
+  - @post.comments.order_by_new.each do |comment|
     .panel.panel-primary
       .panel-heading
         = comment.user.name
         = comment.created_date
+        = link_to comment, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'delete-comment' do
+          %span.glyphicon.glyphicon-remove
       .panel-footer
         = comment.text
