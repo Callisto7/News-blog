@@ -25,7 +25,8 @@
       .panel-heading
         = comment.user.name
         = comment.created_date
-        = link_to comment, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'delete-comment' do
-          %span.glyphicon.glyphicon-remove
+        - if current_user && (comment.user == current_user || current_user.admin?)
+          = link_to comment, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'delete-comment' do
+            %span.glyphicon.glyphicon-remove
       .panel-footer
         = comment.text
