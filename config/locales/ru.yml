@@ -3,6 +3,12 @@ ru:
     gender:
       male: Мужской
       female: Женский
+  post:
+    category:
+      movie: Кино
+      sport: Спорт
+      politic: Политика
+      science: Наука и техника
 
   posts:
     update:
@@ -40,6 +46,8 @@ ru:
               blank: ^Введите заголовок
             text:
               blank: ^Введите текст
+            category:
+              inclusion: ^Выберите категорию из списка
         comment:
           attributes:
             text:

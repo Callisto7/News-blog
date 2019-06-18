@@ -5,7 +5,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.order(created_at: :desc) # SELECT * FROM posts ORDER BY created_at desc
+    scope = params[:category] || 'all'
+    @posts = Post.public_send(scope).order(created_at: :desc) # SELECT * FROM posts ORDER BY created_at desc
   end
 
   # GET /posts/1
@@ -71,6 +72,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.fetch(:post, {}).permit(:title, :text)
+      params.fetch(:post, {}).permit(:title, :text, :category)
     end
 end
