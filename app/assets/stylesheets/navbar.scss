@@ -6,13 +6,14 @@
     color: black;
     font-weight: 600;
   }
-  .navbar-right > li > a:hover{
+  .navbar-right > li > a:hover {
     color: #F21F1F;
   }
 
   .navbar-brand:hover {
     color: black;
   }
+
   .navbar-brand {
     color: #000;
     font-weight: 700;
@@ -25,10 +26,9 @@
       color: dodgerblue;
     }
 
-    a.active {
-      color: dodgerblue;
+    .active {
       font-weight: 600;
-      margin-right: 5px;
+      color: dodgerblue;
     }
   }
 }
