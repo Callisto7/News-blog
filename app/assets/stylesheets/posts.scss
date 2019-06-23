@@ -20,13 +20,62 @@
 
 .show-post, .index-post {
   .btn-like {
-    background-color: #fff;
-    color: #5E81A8;
+    .heart, .heart:before, .heart:after {
+      background-color: darkgrey;
+    }
+
+    .heart {
+      &:hover, &:hover:before, &:hover:after {
+        background-color: darkgrey;
+
+      }
+    }
   }
 
   .active-like {
-    background-color: #5E81A8;
-    color: #fff;
+    .heart, .heart:before, .heart:after {
+      background-color: red;
+    }
+
+    .heart {
+      &:hover, &:hover:before, &:hover:after {
+        background-color: #730E15;
+      }
+    }
+  }
+
+  .heart {
+    display: inline-block;
+    height: 12px;
+    transform: rotate(-45deg);
+    width: 12px;
+
+    &:hover, &:hover:before, &:hover:after {
+      height: 15px;
+      width: 15px;
+      cursor: pointer;
+    }
+
+    &:before, &:after {
+      content: "";
+      border-radius: 50%;
+      height: 12px;
+      position: absolute;
+      width: 12px;
+    }
+
+    &:before {
+      top: -7px;
+    }
+
+    &:after {
+      right: -7px;
+    }
+  }
+
+  .like-count {
+    padding-left: 8px;
+    font-size: 18px;
   }
 
   .date-time, .author, .category {

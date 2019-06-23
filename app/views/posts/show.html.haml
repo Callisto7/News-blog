@@ -9,9 +9,8 @@
     = link_to 'Редактировать', edit_post_path(@post), class: 'btn btn-primary'
     = link_to 'Назад', posts_path, class: 'btn btn-default'
     - has_like = current_user&.like?(@post) ? 'active-like' : ''
-    %a.btn.btn-like.btn-default{ class: has_like, data: { post: { id: @post.id } } }
+    .btn-like{ class: has_like, data: { post: { id: @post.id } } }
       %span.glyphicon.glyphicon-heart
-      Нравится
       %span.like-count
         = @post.likes.active_likes_count
 

@@ -16,8 +16,7 @@
         %span.author Автор: #{post.user.name}
       .post-like
         - has_like = current_user&.like?(post) ? 'active-like' : ''
-        %a.btn.btn-like.btn-default{ class: has_like, data: { post: { id: post.id } } }
-          %span.glyphicon.glyphicon-heart
-          Нравится
+        .btn-like{ class: has_like, data: { post: { id: post.id } } }
+          .heart
           %span.like-count
             = post.likes.active_likes_count
