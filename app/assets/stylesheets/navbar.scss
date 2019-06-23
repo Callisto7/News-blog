@@ -1,17 +1,95 @@
 .navbar-default {
-  border-bottom: 3px solid #ec0000;
-  border-radius: 0;
+  .news a {
+    border-color: #17e19b !important;
+  }
+    .news a:hover {
+      color: #17e19b !important;
+      -webkit-transition: color 200ms ease,
+      background-color 200ms ease,
+      text-shadow 200ms ease,
+      box-shadow 200ms ease,
+      border 200ms ease;
+    }
+
+    .view a {
+      border-color: #E68A00 !important;
+    }
+    .view a:hover {
+      color: #E68A00 !important;
+      -webkit-transition: color 200ms ease,
+      background-color 200ms ease,
+      text-shadow 200ms ease,
+      box-shadow 200ms ease,
+      border 200ms ease;
+    }
+
+    .sports a {
+      border-color: #cc62c8 !important;
+  }
+    .sports a:hover {
+      color: #cc62c8 !important;
+      -webkit-transition: color 200ms ease,
+      background-color 200ms ease,
+      text-shadow 200ms ease,
+      box-shadow 200ms ease,
+      border 200ms ease;
+    }
+
+    .politic a {
+      border-color: #73edfb !important;
+  }
+    .politic a:hover {
+      color: #73edfb !important;
+      -webkit-transition: color 200ms ease,
+      background-color 200ms ease,
+      text-shadow 200ms ease,
+      box-shadow 200ms ease,
+      border 200ms ease;
+    }
+    .politic a {
+      border-color: #73edfb !important;
+    }
+    .politic a:hover {
+      color: #73edfb !important;
+      -webkit-transition: color 200ms ease,
+      background-color 200ms ease,
+      text-shadow 200ms ease,
+      box-shadow 200ms ease,
+      border 200ms ease;
+    }
+
+    .science a {
+      border-color: #d4ca56 !important;
+  }
+    .science a:hover {
+      color: #d4ca56 !important;
+      -webkit-transition: color 200ms ease,
+      background-color 200ms ease,
+      text-shadow 200ms ease,
+      box-shadow 200ms ease,
+      border 200ms ease;
+    }
 
   .navbar-nav > li > a {
     color: black;
     font-weight: 600;
+    border-bottom: 1px solid black;
+    margin-right: 5px;
   }
-  .navbar-right > li > a:hover {
-    color: #F21F1F;
+  .navbar-right > li > a {
+    border-color: #F21F1F;
+  }
+  a:hover {
+    color:#F21F1F !important;
+    -webkit-transition: color 200ms ease,
+    background-color 200ms ease,
+    text-shadow 200ms ease,
+    box-shadow 200ms ease,
+    border 200ms ease;
   }
 
   .navbar-brand:hover {
-    color: black;
+    color: black !important;
   }
 
   .navbar-brand {
@@ -19,16 +97,5 @@
     font-weight: 700;
     font-family: 'Courier New';
     font-size: xx-large;
-  }
-
-  .navbar-center > li {
-    a:hover {
-      color: dodgerblue;
-    }
-
-    .active {
-      font-weight: 600;
-      color: dodgerblue;
-    }
   }
 }

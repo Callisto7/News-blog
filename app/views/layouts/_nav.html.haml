@@ -9,15 +9,15 @@
       %a.navbar-brand{ href: '/' } CALLISTO
     #navbar-news-blog.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-center
-        %li
+        %li.news
           = link_to 'Новости', posts_path
-        %li
+        %li.view
           = link_to 'Кино', posts_path(category: 'movie')
-        %li
+        %li.sports
           = link_to 'Спорт', posts_path(category: 'sport')
-        %li
+        %li.politic
           = link_to 'Политика', posts_path(category: 'politic')
-        %li
+        %li.science
           = link_to 'Наука и техника', posts_path(category: 'science')
       %ul.nav.navbar-nav.navbar-right
         %li
