@@ -17,6 +17,9 @@ class Likes
           $this.removeClass('active-like')
 
         $this.find('.like-count').text(data.like_count)
+      error: (data) ->
+        if data.status == 401
+          window.location.href = '/users/sign_in'
     )
 
 $ ->
