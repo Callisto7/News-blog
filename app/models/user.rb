@@ -11,10 +11,15 @@ class User < ApplicationRecord
 
   has_many :posts
   has_many :comments
+  has_many :likes
 
   validates :first_name, :last_name, :role, :gender, presence: true
 
   def name
     "#{first_name} #{last_name}"
+  end
+
+  def like?(post)
+    likes.find_by(post_id: post.id, active: true)
   end
 end

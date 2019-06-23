@@ -1,6 +1,6 @@
 .new-post, .edit-post, .show-post {
   .actions {
-    .back {
+    .btn-like, .back {
       float: right;
     }
   }
@@ -19,6 +19,16 @@
 }
 
 .show-post, .index-post {
+  .btn-like {
+    background-color: #fff;
+    color: #5E81A8;
+  }
+
+  .active-like {
+    background-color: #5E81A8;
+    color: #fff;
+  }
+
   .date-time, .author, .category {
     display: block;
     color: #afafaf;
@@ -36,6 +46,14 @@
     border-top: 1px solid grey;
     margin-top: 10px;
     padding: 10px 0;
+
+    .post-info, .post-like {
+      display: inline-block;
+    }
+
+    .post-like {
+      float: right;
+    }
   }
 
   .title {
