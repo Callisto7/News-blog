@@ -4,9 +4,9 @@ class Post < ApplicationRecord
 
   enum category: CATEGORIES
 
-  belongs_to :user
-  has_many :comments
-  has_many :likes
+  belongs_to  :user
+  has_many    :comments
+  has_many    :likes
 
   validates :title, :text, presence: true
   validates :category, inclusion: { in: CATEGORIES }

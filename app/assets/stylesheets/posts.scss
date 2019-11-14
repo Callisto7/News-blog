@@ -20,6 +20,8 @@
 
 .show-post, .index-post {
   .btn-like {
+    cursor: pointer;
+
     .heart, .heart:before, .heart:after {
       background-color: darkgrey;
     }
@@ -53,7 +55,6 @@
     &:hover, &:hover:before, &:hover:after {
       height: 15px;
       width: 15px;
-      cursor: pointer;
     }
 
     &:before, &:after {
@@ -141,3 +142,5 @@
     }
   }
 }
+
+

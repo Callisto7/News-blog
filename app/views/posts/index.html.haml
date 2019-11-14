@@ -1,6 +1,5 @@
 .index-post
   %h1.text-center.title Новостной блог
-  %hr
   = link_to 'Добавить новость', new_post_path, class: 'new btn btn-primary'
   - @posts.each do |post|
     .post

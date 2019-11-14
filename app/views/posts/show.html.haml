@@ -10,9 +10,8 @@
     = link_to 'Назад', posts_path, class: 'btn btn-default'
     - has_like = current_user&.like?(@post) ? 'active-like' : ''
     .btn-like{ class: has_like, data: { post: { id: @post.id } } }
-      %span.glyphicon.glyphicon-heart
+      .heart
       %span.like-count
-        = @post.likes.active_likes_count
 
 .comments
   %h4 Комментарии
