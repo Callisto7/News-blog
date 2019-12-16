@@ -13,7 +13,8 @@ gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'jquery-rails'
-gem 'font-awesome-sass'
+gem 'font-awesome-rails'
+gem 'font-awesome-sass', '~> 5.12.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
