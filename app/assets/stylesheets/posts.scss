@@ -155,6 +155,7 @@
     cursor: pointer;
     display: none;
     border-radius: 50%;
+    z-index: 99;
   }
   .glyphicon-arrow-up:before {
     margin-right: 3px;
