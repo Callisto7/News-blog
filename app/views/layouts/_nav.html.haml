@@ -22,7 +22,9 @@
       %ul.nav.navbar-nav.navbar-right
         %li
           - if user_signed_in?
-
-            = link_to 'Выход', destroy_user_session_path, method: :delete
+            = link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'glyphicon glyphicon-off'
           - else
             = link_to 'Войти', new_user_session_path
+
+          %li
+            =link_to 'Регистрация', new_user_registration_path

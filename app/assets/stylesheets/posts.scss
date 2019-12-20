@@ -156,6 +156,9 @@
     display: none;
     border-radius: 50%;
     z-index: 99;
+    &:active, &:focus {
+      outline: none;
+    }
   }
   .glyphicon-arrow-up:before {
     margin-right: 3px;
