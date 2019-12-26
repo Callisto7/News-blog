@@ -94,4 +94,14 @@
     margin-left: 7px;
     padding-top: 3px;
   }
+
+  .container-fluid {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    transition: height 600ms 0s ease;
+    background-color: white;
+  }
 }
