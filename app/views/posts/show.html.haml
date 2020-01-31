@@ -8,10 +8,13 @@
   .actions
     = link_to 'Редактировать', edit_post_path(@post), class: 'btn btn-primary'
     = link_to 'Назад', posts_path, class: 'btn btn-default'
-    - has_like = current_user&.like?(@post) ? 'active-like' : ''
-    .btn-like{ class: has_like, data: { post: { id: @post.id } } }
-      .heart
-      %span.like-count
+    .post-like
+      - has_like = current_user&.like?(@post) ? 'active-like' : ''
+      .btn-like{ class: has_like, data: { post: { id: @post.id } } }
+        .heart
+        %span.like-count
+          = @post.likes.active_likes_count
+
 
 .comments
   %h4 Комментарии

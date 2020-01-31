@@ -20,5 +20,4 @@
           .heart
           %span.like-count
             = post.likes.active_likes_count
-        %button#topBtn
-          %span.glyphicon.glyphicon-arrow-up
+= will_paginate @posts, renderer: 'BootstrapPaginationHelper::LinkRenderer'

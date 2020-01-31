@@ -13,4 +13,21 @@ hr {
   border-top: 1px solid grey;
 }
 
+.pagination {
+  justify-content: center;
+  display: flex;
+  margin: 0;
 
+  ul {
+    margin-bottom: 1rem;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .page-link:focus {
+    z-index: 3;
+    outline: 0;
+    box-shadow: none;
+  }
+}
