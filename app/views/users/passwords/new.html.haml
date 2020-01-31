@@ -1,12 +1,12 @@
 .row.justify-content-center
-  .col-sm-12.col-lg-6.col-xl-5
+  .col-sm-3
     .shadow-sm.auth-form
       %h2.text-center Забыли пароль?
       %p
-        Введите ниже адрес электронной почты, который вы
+        Введите ниже адрес электронной почты, который Вы
         указали при регистрации учетной записи
         %br/
-        Мы отправим вам письмо с инструкцией по сбросу пароля.
+        Мы отправим Вам письмо с инструкцией по сбросу пароля.
       = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
         = f.input :email, autofocus: true, autocomplete: 'email', label: 'Email', placeholder: 'Введите email'
         .form-actions.mt-3

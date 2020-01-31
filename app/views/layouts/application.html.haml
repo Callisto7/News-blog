@@ -10,7 +10,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = render 'layouts/nav'
-    .container
+    .container-fluid.col-10
       - if notice
         %p.alert.alert-success.text-center#notice= notice
       = yield

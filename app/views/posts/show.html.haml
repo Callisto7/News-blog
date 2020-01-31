@@ -22,7 +22,8 @@
 
   = simple_form_for @comment do |f|
     = f.input :post_id, label: false, input_html: { type: 'hidden', value: @post.id }
-    = f.input :text, placeholder: 'Оставьте свой комментарий...', label: false, required: false, input_html: { rows: '5' }
+    = f.input :text, placeholder: 'Оставьте свой комментарий...',
+    label: false, required: false, input_html: { rows: '5' }
 
     .actions
       = f.submit 'Комментировать', class: 'btn comment btn-success'
@@ -33,7 +34,8 @@
         = comment.user.name
         = comment.created_date
         - if current_user && (comment.user == current_user || current_user.admin?)
-          = link_to comment, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'delete-comment' do
+          = link_to comment, method: :delete, data: { confirm: 'Вы уверены?' },
+          class: 'delete-comment' do
             %i.fa.fas.fa-times-circle
       .panel-footer
         = comment.text
