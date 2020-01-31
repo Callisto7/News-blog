@@ -1,8 +1,16 @@
-.forgout-password
-  %h2.text-center Забыли пароль?
-  = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-    = f.input :email, autofocus: true, autocomplete: 'email', label: 'Email', placeholder: 'Введите email'
-    .actions
-      = f.submit 'Cбросить пароль', class: 'btn btn-primary'
-    .shared-links.mt-3
-      = render "users/shared/links"
+.row.justify-content-center
+  .col-sm-12.col-lg-6.col-xl-5
+    .shadow-sm.auth-form
+      %h2.text-center Забыли пароль?
+      %p
+        Введите ниже адрес электронной почты, который вы
+        указали при регистрации учетной записи
+        %br/
+        Мы отправим вам письмо с инструкцией по сбросу пароля.
+      = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+        = f.input :email, autofocus: true, autocomplete: 'email', label: 'Email', placeholder: 'Введите email'
+        .form-actions.mt-3
+          = f.submit 'Сбросить пароль',
+                 class: 'btn btn-outline-info'
+        .shared-links.mt-3
+          = render "users/shared/links"

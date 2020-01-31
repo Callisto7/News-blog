@@ -1,107 +1,166 @@
-@import url('https://fonts.googleapis.com/css?family=Faster+One&display=swap');
-.navbar-default {
-  .news a {
-    border-color: #17e19b !important;
+@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+
+.navbar-brand {
+  font-family: 'Audiowide', cursive;
+  color: #2E2F30 !important;
+}
+
+.bg-light {
+  border-bottom: 1px solid #0095ff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  transition: height 600ms 0s ease;
+}
+
+.navbar-toggler {
+  background-color: #b1b1b1 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #39739d;
+  border-color: #7aa7c7;
+  background-color: #e1ecf4;
+  box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.7);
+  line-height: 1.15384615;
+
+  &:hover {
+    color: #2c5777;
+    background-color: #b3d3ea;
+    text-decoration: none;
   }
-    .news a:hover {
-      color: #17e19b !important;
-      -webkit-transition: color 200ms ease,
-      background-color 200ms ease,
-      text-shadow 200ms ease,
-      box-shadow 200ms ease,
-      border 200ms ease;
+
+  .fa-sign-in-alt  {
+    color: #39739d;
+    &:before {
+      margin-right: 5px;
     }
+  }
 
-    .view a {
-      border-color: #E68A00 !important;
+  .fa-sign-out-alt {
+    color: #39739d;
+    &:before {
+      margin-right: 5px;
     }
-    .view a:hover {
-      color: #E68A00 !important;
-      -webkit-transition: color 200ms ease,
-      background-color 200ms ease,
-      text-shadow 200ms ease,
-      box-shadow 200ms ease,
-      border 200ms ease;
-    }
-
-    .sports a {
-      border-color: #cc62c8 !important;
   }
-    .sports a:hover {
-      color: #cc62c8 !important;
-      -webkit-transition: color 200ms ease,
-      background-color 200ms ease,
-      text-shadow 200ms ease,
-      box-shadow 200ms ease,
-      border 200ms ease;
-    }
-
-    .politic a {
-      border-color: #73edfb !important;
+  .fas, a:hover {
+    text-decoration: none;
   }
-    .politic a:hover {
-      color: #73edfb !important;
-      -webkit-transition: color 200ms ease,
-      background-color 200ms ease,
-      text-shadow 200ms ease,
-      box-shadow 200ms ease,
-      border 200ms ease;
-    }
-    .politic a {
-      border-color: #73edfb !important;
-    }
-    .politic a:hover {
-      color: #73edfb !important;
-      -webkit-transition: color 200ms ease,
-      background-color 200ms ease,
-      text-shadow 200ms ease,
-      box-shadow 200ms ease,
-      border 200ms ease;
-    }
+}
 
-    .science a {
-      border-color: #d4ca56 !important;
-  }
-    .science a:hover {
-      color: #d4ca56 !important;
-      -webkit-transition: color 200ms ease,
-      background-color 200ms ease,
-      text-shadow 200ms ease,
-      box-shadow 200ms ease,
-      border 200ms ease;
-    }
+.navbar-nav>li>a {
+  color: black;
+  font-weight: 600;
+  margin-right: 5px;
+}
 
-  .navbar-nav > li > a {
-    color: black;
-    font-weight: 600;
-    border-bottom: 1px solid black;
-    margin-right: 5px;
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+
+.news a {
+  border-color: #17e19b !important;
+}
+  .news a:hover {
+    color: #17e19b !important;
+    -webkit-transition: color 200ms ease,
+    background-color 200ms ease,
+    text-shadow 200ms ease,
+    box-shadow 200ms ease,
+    border 200ms ease;
   }
 
-  .navbar-brand:hover {
-    color: black !important;
+  .view a {
+    border-color: #E68A00 !important;
+  }
+  .view a:hover {
+    color: #E68A00 !important;
+    -webkit-transition: color 200ms ease,
+    background-color 200ms ease,
+    text-shadow 200ms ease,
+    box-shadow 200ms ease,
+    border 200ms ease;
   }
 
-  .navbar-brand {
-    color: #000;
-    font-weight: 700;
-    font-family: 'Faster One', cursive;
-    font-size: 40px;
+  .sports a {
+    border-color: #cc62c8 !important;
+}
+  .sports a:hover {
+    color: #cc62c8 !important;
+    -webkit-transition: color 200ms ease,
+    background-color 200ms ease,
+    text-shadow 200ms ease,
+    box-shadow 200ms ease,
+    border 200ms ease;
   }
 
-  .glyphicon-user:before, .glyphicon-off:before {
-    float: right;
-    margin-left: 7px;
-    padding-top: 3px;
+  .politic a {
+    border-color: #73edfb !important;
+}
+  .politic a:hover {
+    color: #73edfb !important;
+    -webkit-transition: color 200ms ease,
+    background-color 200ms ease,
+    text-shadow 200ms ease,
+    box-shadow 200ms ease,
+    border 200ms ease;
+  }
+  .politic a {
+    border-color: #73edfb !important;
+  }
+  .politic a:hover {
+    color: #73edfb !important;
+    -webkit-transition: color 200ms ease,
+    background-color 200ms ease,
+    text-shadow 200ms ease,
+    box-shadow 200ms ease,
+    border 200ms ease;
   }
 
-  .container-fluid {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 99;
-    transition: height 600ms 0s ease;
-    background-color: white;
+  .science a {
+    border-color: #d4ca56 !important;
+}
+  .science a:hover {
+    color: #d4ca56 !important;
+    -webkit-transition: color 200ms ease,
+    background-color 200ms ease,
+    text-shadow 200ms ease,
+    box-shadow 200ms ease,
+    border 200ms ease;
   }
+
+  .navbar-center a:hover{
+    text-decoration: none;
+  }
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+}
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-right: 15px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
 }

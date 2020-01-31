@@ -1,53 +1,9 @@
-.log-in, .sign-up, .forgout-password {
-  width: 320px;
-  margin: 0 auto;
+.auth-form {
+  margin-top: 40px;
   padding: 20px;
-
-  .mt-3 {
-    display: flex;
-  }
-
-  em {
-    font-weight: normal;
-  }
-
-  .form-check {
-    .form-check-label {
-      padding-left: 5px;
-    }
-  }
-
-  .actions {
-    padding-bottom: 15px;
-
-    input {
-      display: block;
-      border-radius: 0;
-      width: 100%;
-      height: 40px;
-      border: none;
-      background: -webkit-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
-      background-size: 200%;
-      color: #fff;
-      outline: none;
-      cursor: pointer;
-      transition: .5s;
-      &:hover {
-        background-position: right;
-      }
-    }
-
-    .shared-links {
-      padding-top: 15px;
-    }
-
-  }
-
-  .img-logo {
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
-  }
+  font-family: 'PT Sans Narrow', sans-serif;
+  background-color: white;
+  color: #666666;
 
   .form-group {
     input {
@@ -59,4 +15,52 @@
     }
   }
 
+  .text-center {
+    text-align: center !important;
+  }
+
+  .auth-btn-primary {
+    color: #ffffff;
+    background-color: #0095ff;
+    float: right;
+
+    &:hover {
+      background-color: #0077cc;
+    }
+  }
+
+  .mt-3 {
+    margin-top: 1rem !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-light {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #0095ff !important;
+    margin-right: 5px;
+  }
+  .form-control:focus {
+    box-shadow: none;
+  }
+
+  .form-actions {
+    display: flex;
+  }
+
+  .text-muted {
+    color: #6c757d !important;
+  }
+
+  .form-text {
+    display: block;
+    margin-top: 0.25rem;
+  }
+
+  .img-logo {
+    height: 96px;
+    width: 96px;
+    border-radius: 50%;
+  }
 }

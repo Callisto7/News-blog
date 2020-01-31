@@ -1,13 +1,13 @@
 .index-post
   %h1.text-center.title Новостной блог
-  = link_to 'Добавить новость', new_post_path, class: 'new btn btn-primary'
+  = link_to 'Добавить новость', new_post_path, class: 'new btn btn-outline-primary'
   - @posts.each do |post|
     .post
       .actions
         - if current_user && (post.user == current_user || current_user.admin?)
-          = link_to 'Редактировать', edit_post_path(post), class: 'edit btn btn-primary'
+          = link_to 'Редактировать', edit_post_path(post), class: 'edit btn btn-outline-secondary'
         - if current_user&.admin?
-          = link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'delete btn btn-danger'
+          = link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'delete btn btn-outline-danger'
       %h1= link_to post.title, post_path(post)
       %p= truncate(to_html(post.text), length: 200) { link_to 'Показать полностью', post_path(post) }
       .post-info

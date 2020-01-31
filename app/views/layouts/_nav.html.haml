@@ -1,13 +1,61 @@
-%nav.navbar.navbar-default{ role: 'navigation' }
-  .container-fluid
-    .navbar-header
-      %button.navbar-toggle{ data: { target: '#navbar-news-blog', toggle: 'collapse' }, type: 'button' }
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand{ href: '/' } CALLISTO
-    #navbar-news-blog.collapse.navbar-collapse
+-#%nav.navbar.navbar-defaultс
+-#  .container-fluid
+-#    .navbar-header
+-#      %button.navbar-toggle{ data: { target: '#navbar-news-blog', toggle: 'collapse' }, type: 'button' }
+-#        %span.sr-only Toggle navigation
+-#        %span.icon-bar
+-#        %span.icon-bar
+-#        %span.icon-bar
+-#      %a.navbar-brand{ href: '/' } CALLISTO
+-#    #navbarSupportedContent.collapse.navbar-collapse
+-#      %ul.nav.navbar-nav.navbar-center
+-#        %li.news
+-#          = link_to 'Новости', posts_path
+-#        %li.view
+-#          = link_to 'Кино', posts_path(category: 'movie')
+-#        %li.sports
+-#          = link_to 'Спорт', posts_path(category: 'sport')
+-#        %li.politic
+-#          = link_to 'Политика', posts_path(category: 'politic')
+-#        %li.science
+-#          = link_to 'Наука и техника', posts_path(category: 'science')
+-#      %ul.nav.navbar-nav.navbar-right
+-#        %li
+-#          - if user_signed_in?
+-#            = link_to 'Выйти', destroy_user_session_path,  method: :delete
+-#          - else
+-#            = link_to 'Войти', new_user_session_path
+
+-#%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+-#  .container-fluid.col-10
+-#    %a.navbar-brand{ href: '/' } Logo
+-#    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+-#      %span.navbar-toggler-icon
+-#    #navbarSupportedContent.collapse.navbar-collapse
+-#      %ul.nav.navbar-nav.navbar-center
+-#        %li.news
+-#          = link_to 'Новости', posts_path
+-#        %li.view
+-#          = link_to 'Кино', posts_path(category: 'movie')
+-#        %li.sports
+-#          = link_to 'Спорт', posts_path(category: 'sport')
+-#        %li.politic
+-#          = link_to 'Политика', posts_path(category: 'politic')
+-#        %li.science
+-#          = link_to 'Наука и техника', posts_path(category: 'science')
+-#      %ul.nav.navbar-nav.navbar-right
+-#        %li
+-#          - if user_signed_in?
+-#            = link_to 'Выйти', destroy_user_session_path,  method: :delete
+-#          - else
+-#            = link_to 'Войти', new_user_session_path
+
+%nav.navbar.navbar-expand-lg.navbar-dark.bg-light{ role: 'navigation' }
+  .container-fluid.col-10
+    %a.navbar-brand{:href => "/"} LOGO
+    %button.navbar-toggler{"aria-controls" => "navbarToggleExternalContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarToggleExternalContent", "data-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-center
         %li.news
           = link_to 'Новости', posts_path
@@ -19,9 +67,10 @@
           = link_to 'Политика', posts_path(category: 'politic')
         %li.science
           = link_to 'Наука и техника', posts_path(category: 'science')
-      %ul.nav.navbar-nav.navbar-right
-        %li
-          - if user_signed_in?
-            = link_to 'Выйти', destroy_user_session_path,  method: :delete
-          - else
-            = link_to 'Войти', new_user_session_path
+    %ul.navbar-nav.pull-xs-right
+      - if user_signed_in?
+        %li.nav-link.btn
+          = link_to 'Выход', destroy_user_session_path, method: :delete, class: 'fas fa-sign-out-alt'
+      - else
+        %li.nav-link.btn
+          = link_to 'Войти', new_user_session_path, class: 'fas fa-sign-in-alt'

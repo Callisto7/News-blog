@@ -1,13 +1,15 @@
-.log-in
-  %h2.text-center Вход
-  .text-center
-    = image_tag(asset_path('callisto.jpg'), class: 'img-logo')
-  = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-    = f.input :email, autofocus: true, autocomplete: 'email', label: 'Email', placeholder: 'Введите email'
-    = f.input :password, autocomplete: 'current-password', label: 'Пароль', placeholder: 'Введите пароль'
-    = f.input :remember_me, as: :boolean, label: 'Запомнить меня'
+.row.justify-content-center
+  .col-sm-12.col-lg-6.col-xl-5
+    .shadow-sm.auth-form
+      %h2.text-center Войти
+      .text-center
+        = image_tag(asset_path('callisto.jpg'), class: 'img-logo')
+      = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        = f.input :email, autofocus: true, autocomplete: 'email', label: 'Email', placeholder: 'Введите email'
+        = f.input :password, autocomplete: 'current-password', label: 'Пароль', placeholder: 'Введите пароль'
+        = f.input :remember_me, as: :boolean, label: 'Запомнить меня'
 
-    .actions
-      = f.submit 'Войти', class: 'btn btn-primary'
-  .shared-links.mt-3
-    = render 'users/shared/links'
+        .mt-3.text-center
+          = f.submit 'Войти', class: 'btn btn-outline-primary'
+      .shared-links.text-center.mt-3
+        = render 'users/shared/links'

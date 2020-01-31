@@ -7,7 +7,7 @@
 
   .actions
     = link_to 'Редактировать', edit_post_path(@post), class: 'btn btn-primary'
-    = link_to 'Назад', posts_path, class: 'btn btn-default'
+    = link_to 'Назад', posts_path, class: 'btn btn-outline-dark'
     .post-like
       - has_like = current_user&.like?(@post) ? 'active-like' : ''
       .btn-like{ class: has_like, data: { post: { id: @post.id } } }
@@ -25,7 +25,7 @@
     = f.input :text, placeholder: 'Оставьте свой комментарий...', label: false, required: false, input_html: { rows: '5' }
 
     .actions
-      = f.submit 'Комментировать', class: 'btn comment btn-success'
+      = f.submit 'Комментировать', class: 'btn btn-outline-success'
 
   - @post.comments.order_by_new.each do |comment|
     .panel.panel-primary

@@ -12,9 +12,10 @@
 
 .edit-post {
   .actions {
-    .btn-success {
+    .back {
       margin-left: 5px;
     }
+
   }
 }
 
@@ -93,7 +94,7 @@
 
 .index-post  {
   .post {
-    border-top: 1px solid grey;
+    border-top: 1px solid #0095ff;
     margin-top: 10px;
     padding: 10px 0;
 
@@ -118,27 +119,7 @@
     color: #ff6c00;
   }
 
-  .new {
-    background-color: coral;
-    border-color: #ffffff;
-
-    &:active {
-      background-color: coral;
-      color: #ffffff;
-    }
-  }
-
   .actions {
     text-align: right;
-  }
-
-  .edit {
-    background-color: blueviolet;
-    border-color: #ffffff;
-
-    &:active {
-      background-color: blueviolet;
-      color: #ffffff;
-    }
   }
 }
