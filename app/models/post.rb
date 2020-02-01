@@ -8,6 +8,8 @@ class Post < ApplicationRecord
   has_many    :comments
   has_many    :likes
 
+  mount_uploader :image, ImageUploader
+
   validates :title, :text, presence: true
   validates :category, inclusion: { in: CATEGORIES }
 end
