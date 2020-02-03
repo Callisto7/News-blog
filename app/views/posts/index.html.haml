@@ -12,16 +12,17 @@
           = link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены?' },
           class: 'delete btn btn-outline-danger'
       %h1= link_to post.title, post_path(post)
-      %p= truncate(to_html(post.text), length: 200) { link_to 'Показать полностью', post_path(post) }
-      -#= image_tag @post.image.url(:thumb), class: 'img-thumbinail thumb' if @post.image?
-      .post-info
-        %span.category Категория: #{t("post.category.#{post.category}")}
-        %span.date-time Добавлено: #{post.created_date}
-        %span.author Автор: #{post.user.name}
-      .post-like
-        - has_like = current_user&.like?(post) ? 'active-like' : ''
-        .btn-like{ class: has_like, data: { post: { id: post.id } } }
-          .heart
-          %span.like-count
-            = post.likes.active_likes_count
+      .image-index
+      = image_tag post.image.url(:thumb), class: 'img-thumbinail thumb' if post.image?
+      %p.text-justify= truncate(to_html(post.text), length: 200) { link_to 'Показать полностью', post_path(post) }
+    .post-info
+      %span.category Категория: #{t("post.category.#{post.category}")}
+      %span.date-time Добавлено: #{post.created_date}
+      %span.author Автор: #{post.user.name}
+    .post-like
+      - has_like = current_user&.like?(post) ? 'active-like' : ''
+      .btn-like{ class: has_like, data: { post: { id: post.id } } }
+        .heart
+        %span.like-count
+          = post.likes.active_likes_count
 = will_paginate @posts, renderer: 'BootstrapPaginationHelper::LinkRenderer'

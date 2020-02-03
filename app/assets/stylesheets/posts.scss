@@ -30,7 +30,6 @@
     .heart {
       &:hover, &:hover:before, &:hover:after {
         background-color: darkgrey;
-
       }
     }
   }
@@ -124,7 +123,7 @@
   }
 }
 
-.img-show {
+.image-show {
   display: block;
   margin-bottom: 2em;
 }
@@ -133,3 +132,63 @@
   float: left;
   margin-right: 1em;
 }
+
+.show-post {
+  .post-info {
+    display: inline-block;
+    margin-bottom: 1em;
+  }
+}
+
+.index-post {
+  .post-info {
+    display: inline-block;
+  }
+
+  .post-like {
+    float: right;
+    padding-top: 15px;
+  }
+}
+
+.index-post {
+  h1 {
+    font-size: 2.1rem;
+  }
+}
+
+  .actions {
+    .btn-outline-success {
+      margin-bottom: 15px;
+    }
+  }
+
+@media (max-width: 600px) {
+  .thumb {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+
+//медиа-запросы
+  @media (max-width: 600px) {
+    .index-post h1 {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .new {
+      margin-left: 35px;
+      margin-right: 35px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .btn-outline-success {
+      margin-left: 42px;
+      margin-right: 42px;
+    }
+  }

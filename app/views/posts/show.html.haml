@@ -1,15 +1,18 @@
 .show-post
-  %h1= @post.title
-  %span.category Категория: #{t("post.category.#{@post.category}")}
-  %span.date-time Добавлено: #{@post.created_date}
-  %span.author Автор: #{@post.user.name}
+  %h1.text-center= @post.title
+  .image-show.d-flex.align-items-center.flex-column
+    = image_tag @post.image.url(:large), class: 'img-thumbnail' if @post.image?
+  %p.text-justify= to_html(@post.text)
 
-  .img-show
-    = image_tag @post.image.url(:large), class: 'img-show' if @post.image?
-    %p= to_html(@post.text)
+  -#.post-info
+  -#  %span.category Категория: #{t("post.category.#{@post.category}")}
+  -#  %span.date-time Добавлено: #{@post.created_date}
+  -#  %span.author Автор: #{@post.user.name}
+
   .actions
     = link_to 'Редактировать', edit_post_path(@post), class: 'btn btn-primary'
     = link_to 'Назад', posts_path, class: 'btn btn-outline-dark'
+
     .post-like
       - has_like = current_user&.like?(@post) ? 'active-like' : ''
       .btn-like{ class: has_like, data: { post: { id: @post.id } } }
@@ -28,7 +31,7 @@
     label: false, required: false, input_html: { rows: '5' }
 
     .actions
-      = f.submit 'Комментировать', class: 'btn comment btn-success'
+      = f.submit 'Комментировать', class: 'btn btn-outline-success'
 
   - @post.comments.order_by_new.each do |comment|
     .panel.panel-primary
