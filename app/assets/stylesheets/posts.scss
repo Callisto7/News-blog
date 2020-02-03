@@ -10,15 +10,6 @@
   }
 }
 
-.edit-post {
-  .actions {
-    .back {
-      margin-left: 5px;
-    }
-
-  }
-}
-
 .show-post, .index-post {
   .btn-like {
     cursor: pointer;
@@ -151,6 +142,13 @@
   }
 }
 
+.show-post {
+  .btn-like {
+    float: right;
+    padding-top: 15px;
+  }
+}
+
 .index-post {
   h1 {
     font-size: 2.1rem;
@@ -158,37 +156,114 @@
 }
 
   .actions {
+    .btn-outline-info {
+      float: right;
+      margin-left: 5px;
+    }
+
     .btn-outline-success {
       margin-bottom: 15px;
     }
   }
 
+
+//медиа-запросы
+
 @media (max-width: 600px) {
   .thumb {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 36px;
+    padding-left: 36px;
+    margin-bottom: 12px;
   }
 }
 
-
-//медиа-запросы
   @media (max-width: 600px) {
     .index-post h1 {
       padding-right: 20px;
       padding-left: 20px;
+      text-align: center;
+      word-break: break-word;
+      font-size: 32px;
     }
   }
 
   @media (max-width: 600px) {
     .new {
-      margin-left: 35px;
-      margin-right: 35px;
+      margin-left: 60px;
+      margin-right: 60px;
     }
   }
 
-  @media (max-width: 600px) {
-    .btn-outline-success {
-      margin-left: 42px;
-      margin-right: 42px;
+@media (max-width: 600px) {
+  .edit {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn-outline-success {
+    margin-left: 63px;
+    margin-right: 63px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pagination ul {
+    padding-left: 0;
+    padding-top: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .show-post {
+    .btn-like {
+      padding-top: 0px !important;
+      margin-top: -38px;
     }
   }
+}
+
+
+
+@media (max-width: 600px) {
+  .edit-post h1 {
+    text-align: center;
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn-outline-info {
+    max-width: 167px;
+    padding: 6px;
+    word-break: break-all;
+    height: 37px;
+  }
+}
+
+@media (max-width: 600px) {
+  .back {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .add-image {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn-outline-dark {
+    float: right;
+  }
+}
+
+@media (max-width: 600px) {
+  .new-post {
+    .text-center {
+      font-size: 32px;
+      text-align: center;
+    }
+  }
+}

@@ -9,16 +9,16 @@
   -#  %span.date-time Добавлено: #{@post.created_date}
   -#  %span.author Автор: #{@post.user.name}
 
+  .post-like
+  - has_like = current_user&.like?(@post) ? 'active-like' : ''
+  .btn-like{ class: has_like, data: { post: { id: @post.id } } }
+    .heart
+    %span.like-count
+      = @post.likes.active_likes_count
+
   .actions
     = link_to 'Редактировать', edit_post_path(@post), class: 'btn btn-primary'
     = link_to 'Назад', posts_path, class: 'btn btn-outline-dark'
-
-    .post-like
-      - has_like = current_user&.like?(@post) ? 'active-like' : ''
-      .btn-like{ class: has_like, data: { post: { id: @post.id } } }
-        .heart
-        %span.like-count
-          = @post.likes.active_likes_count
 
 
 .comments
