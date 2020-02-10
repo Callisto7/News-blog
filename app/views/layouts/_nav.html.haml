@@ -1,6 +1,7 @@
 %nav.navbar.navbar-expand-lg.navbar-dark.bg-light.fixed-top
   .container-fluid.col-10
-    %a.navbar-brand{:href => "/"} LOGO
+    %a.navbar-brand{:href => "/"}
+      = image_tag(asset_path('callisto.jpg'), class: 'd-inline-block align-top')
     %button.navbar-toggler{'aria-controls' => 'navbarToggleExternalContent',
     'aria-expanded' => 'false',
     'aria-label' =>    'Toggle navigation',
