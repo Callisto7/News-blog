@@ -1,4 +1,5 @@
 .new-post, .edit-post, .show-post {
+  padding-top: 7.5rem;
   .actions {
     .btn-like, .back {
       float: right;
@@ -83,6 +84,7 @@
 }
 
 .index-post  {
+  padding-top: 7.5rem;
   .post {
     border-top: 1px solid #0095ff;
     margin-top: 10px;
@@ -166,55 +168,46 @@
     }
   }
 
-
 //медиа-запросы
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .thumb {
-    padding-right: 36px;
-    padding-left: 36px;
+    padding-right: 45px;
+    padding-left: 45px;
     margin-bottom: 12px;
   }
 }
 
-  @media (max-width: 600px) {
-    .index-post h1 {
-      padding-right: 20px;
-      padding-left: 20px;
-      text-align: center;
-      word-break: break-word;
-      font-size: 32px;
-    }
-  }
-
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     .new {
-      margin-left: 60px;
+      margin-left: 80px;
       margin-right: 60px;
     }
   }
 
-@media (max-width: 600px) {
-  .edit {
+@media (max-width: 768px) {
+  .edit .delete {
+    margin-right: 27px;
+    margin-left: 27px;
     margin-bottom: 10px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .btn-outline-success {
     margin-left: 63px;
     margin-right: 63px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .pagination ul {
     padding-left: 0;
     padding-top: 8px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .show-post {
     .btn-like {
       padding-top: 0px !important;
@@ -223,16 +216,14 @@
   }
 }
 
-
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .edit-post h1 {
     text-align: center;
     font-size: 32px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .btn-outline-info {
     max-width: 167px;
     padding: 6px;
@@ -241,25 +232,25 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .back {
     display: none;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .add-image {
     padding-top: 20px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .btn-outline-dark {
     float: right;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .new-post {
     .text-center {
       font-size: 32px;
