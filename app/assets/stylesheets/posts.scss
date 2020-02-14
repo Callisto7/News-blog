@@ -1,5 +1,4 @@
 .new-post, .edit-post, .show-post {
-  padding-top: 7.5rem;
   .actions {
     .btn-like, .back {
       float: right;
@@ -84,7 +83,6 @@
 }
 
 .index-post  {
-  padding-top: 7.5rem;
   .post {
     border-top: 1px solid #0095ff;
     margin-top: 10px;
@@ -166,6 +164,10 @@
     .btn-outline-success {
       margin-bottom: 15px;
     }
+  }
+
+  .container {
+    padding-top: 7.5rem;
   }
 
 //медиа-запросы
