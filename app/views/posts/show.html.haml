@@ -16,9 +16,10 @@
     %span.like-count
       = @post.likes.active_likes_count
 
-  .actions
-    = link_to 'Редактировать', edit_post_path(@post), class: 'btn btn-primary'
-    = link_to 'Назад', posts_path, class: 'btn btn-outline-dark'
+  - if current_user&.admin?
+    .actions
+      = link_to 'Редактировать', edit_post_path(@post), class: 'btn btn-primary'
+      = link_to 'Назад', posts_path, class: 'btn btn-outline-dark'
 
 
 .comments

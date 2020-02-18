@@ -9,6 +9,7 @@ ru:
       sport: Спорт
       politic: Политика
       science: Наука и техника
+      economic: Экономика
   will_paginate:
       previous_label: '&laquo;'
       next_label: '&raquo;'

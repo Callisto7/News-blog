@@ -68,3 +68,16 @@
 .justify-content-center {
   padding-top: 4.5rem;
 }
+
+.nav-link {
+  margin-right: 5px;
+  .fa {
+    color: #39739d;
+  }
+}
+
+.fa-user-circle-o:before {
+  content: "\f2be";
+  padding-right: 5px;
+}
+

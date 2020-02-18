@@ -17,14 +17,16 @@
           = link_to 'Спорт', posts_path(category: 'sport')
         %li.politic
           = link_to 'Политика', posts_path(category: 'politic')
+        %li.economic
+          = link_to 'Экономика', posts_path(category: 'economic')
         %li.science
           = link_to 'Наука и техника', posts_path(category: 'science')
       %ul.navbar-nav.pull-xs-right
         - if user_signed_in?
           %li.nav-link.btn
             = link_to 'Выход', destroy_user_session_path, method: :delete,
-              class: 'fas fa-sign-out-alt'
+              class: 'fa fas fa-sign-out-alt'
         - else
           %li.nav-link.btn
             = link_to 'Войти', new_user_session_path,
-              class: 'fas fa-sign-in-alt'
+              class: 'fa fas fa-sign-in-alt'
