@@ -19,6 +19,7 @@ gem 'font-awesome-sass'
 gem 'will_paginate', '~> 3.1.0'
 gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
+gem 'rails-i18n'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -48,6 +49,7 @@ gem 'devise'
 gem 'haml-rails', '~> 2.0'
 gem 'simple_form'
 gem 'active_link_to'
+gem 'activeadmin'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
