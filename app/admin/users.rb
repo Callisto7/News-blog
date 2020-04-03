@@ -4,7 +4,7 @@ ActiveAdmin.register User do
     selectable_column
     id_column
     column :last_name
-    # column :first_name
+    column :first_name
     column :email
     column :current_sign_in_at
     column :sign_in_count

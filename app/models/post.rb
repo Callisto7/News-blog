@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
   include Dateable
-  CATEGORIES = %w[movie sport politic science].freeze
+  CATEGORIES = %w[movie sport politic economic science].freeze
 
   enum category: CATEGORIES
 

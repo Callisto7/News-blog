@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
 
 .navbar-brand {
-  font-family: 'Audiowide', cursive;
-  color: #2E2F30 !important;
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
 }
 
 .bg-light {
@@ -62,20 +67,8 @@
   padding: 10px 15px;
 }
 
-.news a {
-  border-color: #17e19b !important;
-
-}
 .nav > li > a:hover {
     text-decoration: none;
-  }
-  .news a:hover {
-    color: #17e19b !important;
-    -webkit-transition: color 200ms ease,
-    background-color 200ms ease,
-    text-shadow 200ms ease,
-    box-shadow 200ms ease,
-    border 200ms ease;
   }
 
   .view a {
@@ -89,6 +82,18 @@
     box-shadow 200ms ease,
     border 200ms ease;
   }
+
+.economic a {
+  border-color: #ff0000 !important;
+}
+.economic a:hover {
+  color: #ff0000 !important;
+  -webkit-transition: color 200ms ease,
+  background-color 200ms ease,
+  text-shadow 200ms ease,
+  box-shadow 200ms ease,
+  border 200ms ease;
+}
 
   .sports a {
     border-color: #cc62c8 !important;
@@ -197,7 +202,7 @@ a:hover, a:focus {
 }
 
 .align-top {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }

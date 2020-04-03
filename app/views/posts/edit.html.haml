@@ -1,5 +1,5 @@
 .edit-post
-  %h1 Редактировать новость
+  %h1.text-center Редактировать новость
   = render 'form', post: @post do |f|
     = f.submit 'Сохранить', class: 'btn btn-primary'
     = link_to 'Показать полностью', @post, class: 'btn btn-outline-info'

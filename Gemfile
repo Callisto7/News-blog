@@ -16,10 +16,13 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
 gem 'font-awesome-sass'
-gem 'will_paginate', '~> 3.1.0'
 gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
 gem 'rails-i18n'
+
+# paginate with bootstrap 4
+gem 'will_paginate-bootstrap4'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes

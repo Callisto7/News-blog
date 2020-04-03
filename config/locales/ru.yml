@@ -8,6 +8,7 @@ ru:
       movie: Кино
       sport: Спорт
       politic: Политика
+      economic: Экономика
       science: Наука и техника
   will_paginate:
       previous_label: '&laquo;'
