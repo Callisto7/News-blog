@@ -10,11 +10,6 @@ class PostsController < ApplicationController
     @posts = Post.paginate(page: params[:page], per_page: 5).public_send(scope).order(created_at: :desc)
   end
 
-  # def index
-  #   scope = params[:category] || 'all'
-  #   @posts = Post.public_send(scope).order(created_at: :desc) # SELECT * FROM posts ORDER BY created_at desc
-  # end
-
   # GET /posts/1
   # GET /posts/1.json
   def show

@@ -1,4 +1,5 @@
 ActiveAdmin.register User do
+  permit_params :first_name, :last_name, :role, :gender, :email, :password, :password_confirmation
 
   index do
     selectable_column
@@ -10,6 +11,29 @@ ActiveAdmin.register User do
     column :sign_in_count
     column :created_at
     actions
+  end
+
+  show do
+    attributes_table do
+      row :first_name, label: "Имя"
+      row :last_name, label: "Фамилия"
+      row :email, label: "Email"
+      row :role, label: "Роль"
+      row :gender, label: "Пол"
+    end
+  end
+
+  form do |f|
+    f.inputs "Создание  пользователя" do
+      f.input :first_name, label: "Имя"
+      f.input :last_name, label: "Фамилия"
+      f.input :email, label: "Email"
+      f.input :password, label: "Пароль"
+      f.input :password_confirmation, label: "Подтвердите пароль"
+      f.input :role, label: "Роль"
+      f.input :gender, label: "Пол"
+    end
+    f.actions
   end
 
 end
