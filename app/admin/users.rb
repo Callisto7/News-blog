@@ -1,14 +1,13 @@
 ActiveAdmin.register User do
   permit_params :first_name, :last_name, :role, :gender, :email, :password, :password_confirmation
 
+  menu label: "Пользователи"
   index do
     selectable_column
     id_column
     column :last_name
     column :first_name
     column :email
-    column :current_sign_in_at
-    column :sign_in_count
     column :created_at
     actions
   end
@@ -24,7 +23,7 @@ ActiveAdmin.register User do
   end
 
   form do |f|
-    f.inputs "Создание  пользователя" do
+    f.inputs "Создание пользователя" do
       f.input :first_name, label: "Имя"
       f.input :last_name, label: "Фамилия"
       f.input :email, label: "Email"
