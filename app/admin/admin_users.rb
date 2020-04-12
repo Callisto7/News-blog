@@ -6,8 +6,6 @@ ActiveAdmin.register AdminUser do
     selectable_column
     id_column
     column :email
-    column :current_sign_in_at
-    column :sign_in_count
     column :created_at
     actions
   end
@@ -18,10 +16,10 @@ ActiveAdmin.register AdminUser do
   filter :created_at
 
   form do |f|
-    f.inputs do
-      f.input :email
-      f.input :password
-      f.input :password_confirmation
+    f.inputs 'Создание Админа' do
+      f.input :email, label: 'Email'
+      f.input :password, label: 'Пароль'
+      f.input :password_confirmation, label: 'Подтвердите пароль'
     end
     f.actions
   end

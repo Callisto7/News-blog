@@ -23,6 +23,10 @@
           = link_to 'Наука и техника', posts_path(category: 'science')
       %ul.navbar-nav.pull-xs-right
         - if user_signed_in?
+          -if current_user.admin?
+            %li.nav
+            = link_to 'Панель администратора', new_admin_user_session_path,
+                class: 'fas fa-sign-in-alt'
           %li.nav-link.btn
             = link_to 'Выход', destroy_user_session_path, method: :delete,
               class: 'fas fa-sign-out-alt'

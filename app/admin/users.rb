@@ -7,20 +7,8 @@ ActiveAdmin.register User do
     column :last_name
     column :first_name
     column :email
-    column :current_sign_in_at
-    column :sign_in_count
     column :created_at
     actions
-  end
-
-  show do
-    attributes_table do
-      row :first_name, label: "Имя"
-      row :last_name, label: "Фамилия"
-      row :email, label: "Email"
-      row :role, label: "Роль"
-      row :gender, label: "Пол"
-    end
   end
 
   form do |f|
