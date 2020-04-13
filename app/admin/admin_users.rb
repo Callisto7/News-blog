@@ -20,8 +20,14 @@ ActiveAdmin.register AdminUser do
       f.input :email, label: "Email"
       f.input :password, label: "Пароль"
       f.input :password_confirmation, label: "Подтвердите пароль"
+
+      f.inputs 'Создание Админа' do
+      f.input :email, label: 'Email'
+      f.input :password, label: 'Пароль'
+      f.input :password_confirmation, label: 'Подтвердите пароль'
     end
     f.actions
+  end
   end
 
 end

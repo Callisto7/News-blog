@@ -21,12 +21,16 @@
           = link_to 'Экономика', posts_path(category: 'economic')
         %li.science
           = link_to 'Наука и техника', posts_path(category: 'science')
-      %ul.navbar-nav.pull-xs-right
-        - if user_signed_in?
-          %li.nav-link.btn
-            = link_to 'Выход', destroy_user_session_path, method: :delete,
-              class: 'fas fa-sign-out-alt'
-        - else
-          %li.nav-link.btn
-            = link_to 'Войти', new_user_session_path,
-              class: 'fas fa-sign-in-alt'
+      .dropdown
+        %i.fa.fas.fa-user.fa-lg#dropdownMenu2.btn{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+        .dropdown-menu{"aria-labelledby" => "dropdownMenu2"}
+          - if user_signed_in?
+            -if current_user.admin?
+              %a.dropdown-item{:href => "#"}
+              = link_to 'Панель администратора', new_admin_user_session_path
+              %a.dropdown-item{:href => "#"}
+              = link_to 'Выход', destroy_user_session_path, method: :delete,
+                class: 'fas fa-sign-out-alt'
+              %a.dropdown-item{:href => "#"}
+          - else
+            = link_to 'Войти', new_user_session_path

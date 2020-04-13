@@ -12,16 +12,6 @@ ActiveAdmin.register User do
     actions
   end
 
-  show do
-    attributes_table do
-      row :first_name, label: "Имя"
-      row :last_name, label: "Фамилия"
-      row :email, label: "Email"
-      row :role, label: "Роль"
-      row :gender, label: "Пол"
-    end
-  end
-
   form do |f|
     f.inputs "Создание пользователя" do
       f.input :first_name, label: "Имя"
