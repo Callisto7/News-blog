@@ -28,9 +28,8 @@
             -if current_user.admin?
               %a.dropdown-item{:href => "#"}
               = link_to 'Панель администратора', new_admin_user_session_path
-              %a.dropdown-item{:href => "#"}
-              = link_to 'Выход', destroy_user_session_path, method: :delete,
-                class: 'fas fa-sign-out-alt'
-              %a.dropdown-item{:href => "#"}
+            %a.dropdown-item{:href => "#"}
+            = link_to 'Выход', destroy_user_session_path, method: :delete
+            %a.dropdown-item{:href => "#"}
           - else
             = link_to 'Войти', new_user_session_path
