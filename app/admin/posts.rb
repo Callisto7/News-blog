@@ -36,20 +36,6 @@ ActiveAdmin.register Post do
     end
   end
 
-  permit_params :user_id, :title, :text, :category
-
-    index do
-      selectable_column
-      id_column
-      column :user
-      column :title
-      column :text
-      column :created_at
-      column :updated_at
-      column :category
-      actions
-    end
-
   show do
     attributes_table do
       row 'Имя' do |post|
