@@ -1,0 +1,96 @@
+ru:
+  admin:
+    user:
+      titles:
+        index: 'Управление пользователями'
+        new: 'Создать пользователя'
+        edit: 'Изменить пользователя'
+      actions:
+        add: 'Добавить пользователя'
+        save: 'Сохранить пользователя'
+      attributes: &user_attributes
+        name: 'Имя'
+        email: 'Email'
+        gender: 'Пол'
+        price: 'Цена'
+        role: 'Роль'
+      roles: &user_roles
+        super: 'Супер пользователь'
+        admin: 'Администратор'
+        standard: 'Стандартный пользователь'
+      flash_messages:
+        delete:
+          success: 'Пользователь успешно удален'
+          danger: 'Не удалось удалить пользователя'
+        update:
+          success: 'Роль пользователя успешно обновлена'
+          danger: 'Не удалось обновить роль пользователя'
+      nav_path:
+        user: 'Управление пользователями'
+        index: 'Все пользователи'
+        show: 'Показать пользователя'
+      messages:
+        no_address: 'Полный адрес отсутствует'
+
+  user:
+    attributes:
+      <<: *user_attributes
+      edit: 'Редактировать'
+      password_label: 'Новый пароль'
+      password_confirmation_label: 'Подтвердить новый пароль'
+    roles:
+      <<: *user_roles
+    titles:
+      edit: 'Редактирование пользователя'
+      forgot_your_password: 'Забыли свой пароль?'
+      change_your_password: 'Изменить пароль'
+      resend_confirm_instructions: 'Отправить повторно инструкцию по восстановлению пароля'
+    actions:
+      update: 'Обновить'
+      cancel_account: 'Удалить мой аккаунт'
+      back: 'Назад'
+      send_me: 'Отправить инструкцию по сбросу пароля'
+      change_my_password: 'Изменить мой пароль'
+      resend_confirm_instructions: 'Отправить повторно'
+    password:
+      character_minimum: 'минимум %{count} символов'
+      password_hint: 'оставьте это поле пустым, если вы не хотите менять пароль'
+      current_password_hint: 'нам нужен ваш текущий пароль для подтверждения ваших изменений'
+      unconfirmed_email: 'В настоящий момент ожидает подтверждения для: %{email}'
+
+  activerecord:
+    attributes:
+      user:
+        first_name: 'Имя'
+        last_name: 'Фамилия'
+        email: 'Email'
+        password: 'Пароль'
+        password_confirmation: 'Подтвердите пароль'
+        role: 'Роль'
+        remember_me: 'Запомнить'
+        current_password: 'Текущий пароль'
+    errors:
+      models:
+        user:
+          attributes:
+            first_name: &blanks
+              blank: '^не должно быть пустым'
+            last_name:
+              <<: *blanks
+            email:
+              <<: *blanks
+              taken: 'уже существует'
+              invalid: '^Не корректный Email'
+            password:
+              <<: *blanks
+              too_short: 'слишком короткий'
+              too_long: 'слишком длинный'
+            current_password:
+              <<: *blanks
+              invalid: '^неверный пароль'
+            password_confirmation:
+              confirmation: '^Пароли не совпадают'
+            role:
+              inclusion: 'Значение должно быть super, admin или standard'
+              update_another_role_to_super: 'Невозможно установить супер роль'
+              update_super_role_to_another: 'Невозможно изменить супер роль'

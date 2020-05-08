@@ -1,7 +1,7 @@
 .show-post
   %h1.text-center= @post.title
   .image-show.d-flex.align-items-center.flex-column
-    = image_tag @post.image.url(:large), class: 'img-thumbnail' if @post.image?
+    = image_tag @post.image.url(:large), class: 'img-fluid' if @post.image?
   %p.text-justify= to_html(@post.text)
 
   .post-info

@@ -21,15 +21,46 @@
           = link_to 'Экономика', posts_path(category: 'economic')
         %li.science
           = link_to 'Наука и техника', posts_path(category: 'science')
+
+        -#  - if user_signed_in?
+        -#%i.fa.fas.fa-user.fa-lg#dropdownMenu2.btn{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+        -#.dropdown-menu{"aria-labelledby" => "dropdownMenu2"}
+        -#  = current_user.name
+        -#  -if current_user.admin?
+        -#    %a.dropdown-item{:href => "#"}
+        -#  %i.fa.fa.fa-user-cog
+        -#    = link_to 'Админ панель', new_admin_user_session_path
+        -#  %a.dropdown-item{:href => "#"}
+        -#    = link_to 'Выход', destroy_user_session_path, method: :delete
+        -#  %a.dropdown-item{:href => "#"}
+        -#  %i.fa.fas.fa-cogs
+        -#    = link_to 'Мой аккаунт', users_path, class: 'dropdown'
+        -#  %a.dropdown-item{:href => "#"}
+        -#- else
+        -#  = link_to 'Войти', new_user_session_path
+
+          %ul.navbar-nav.ml-auto
       .dropdown
-        %i.fa.fas.fa-user.fa-lg#dropdownMenu2.btn{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
-        .dropdown-menu{"aria-labelledby" => "dropdownMenu2"}
-          - if user_signed_in?
-            -if current_user.admin?
-              %a.dropdown-item{:href => "#"}
-              = link_to 'Админ панель', new_admin_user_session_path
-            %a.dropdown-item{:href => "#"}
-            = link_to 'Выход', destroy_user_session_path, method: :delete
-            %a.dropdown-item{:href => "#"}
-          - else
-            = link_to 'Войти', new_user_session_path
+        - if user_signed_in?
+          = link_to '#', class: 'nav-link dropdown-toggle',
+                         id: 'user-full-name',
+                         aria: { expanded: 'false', haspopup: 'true' },
+                         data: { toggle: 'dropdown' } do
+            %i.fa.fas.fa-user.fa-lg
+            = current_user.name
+          .dropdown-menu{ aria: { labelledby: 'dropdownMenu2' } }
+            = link_to users_path, class: 'dropdown-item' do
+              .fa.fas.fa-cogs
+              = t('shared.navbar.my_account')
+            - if current_user.admin?
+              = link_to new_admin_user_session_path, class: 'dropdown-item' do
+                .fa.fas.fa-user-secret
+                = t('shared.navbar.admin_panel')
+            = link_to destroy_user_session_path, method: :delete, class: 'dropdown-item' do
+              .fa.fas.fa-sign-out-alt
+              = t('shared.navbar.logout')
+        - else
+          .user-tools
+            = link_to new_user_session_path do
+              .fas.fa-sign-in-alt
+              = t('shared.navbar.login')

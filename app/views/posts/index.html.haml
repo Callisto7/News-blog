@@ -10,7 +10,7 @@
           class: 'delete btn btn-outline-danger'
       %h1= link_to post.title, post_path(post)
       .image-index
-      = image_tag post.image.url(:thumb), class: 'img-thumbinail thumb' if post.image?
+      = image_tag post.image.url(:thumb), class: 'rounded float-left thumb' if post.image?
       %p.text-justify= truncate(to_html(post.text), length: 200) { link_to 'Показать полностью', post_path(post) }
     .post-info
       %span.category Категория: #{t("post.category.#{post.category}")}

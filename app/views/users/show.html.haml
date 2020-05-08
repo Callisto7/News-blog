@@ -1,0 +1,22 @@
+.row.justify-content-center
+  .col-sm-12.col-md-10.col-lg-6
+    %h4.mt-2= current_user.name
+    %hr
+    .mb-5
+      %p
+        %strong #{t('user.attributes.role')}:
+        %span.badge.badge-pill.badge-info
+          %i.far.fa.fa-circle
+          = t("user.roles.#{current_user.role}")
+      - %w[email].each do |attr|
+        %p
+          %strong #{t("user.attributes.#{attr}")}:
+          = current_user.send(attr)
+
+      - %w[gender].each do |g|
+        %p
+          %strong #{t("user.attributes.#{g}")}:
+          = t("user.gender.#{current_user.gender}")
+    .action
+      = link_to t('user.attributes.edit'), edit_user_registration_path, class: 'btn btn-primary'
+      = link_to 'Предложить новость', new_post_path, class: 'new btn btn-outline-primary'

@@ -38,7 +38,7 @@ ActiveAdmin.register Post do
 
   show do
     attributes_table do
-      row 'Имя' do |post|
+      row 'Автор' do |post|
         post.user
       end
       row 'Заголовок' do |post|
@@ -71,7 +71,6 @@ ActiveAdmin.register Post do
       f.input :image, label: "Фотография"
     end
     f.actions
-
   end
   
 end

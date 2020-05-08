@@ -3,6 +3,9 @@ ru:
     gender:
       male: Мужской
       female: Женский
+      shared:
+      navbar:
+      login: Кино
   post:
     category:
       movie: Кино
@@ -56,4 +59,9 @@ ru:
           attributes:
             text:
               blank: ^Комментарий не может быть пустым
-
+  shared:
+      navbar:
+        admin_panel: 'Администрирование'
+        my_account: 'Мой аккаунт'
+        login: 'Войти'
+        logout: 'Выйти'

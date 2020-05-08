@@ -64,6 +64,12 @@
   }
 }
 
+.col-lg-6 {
+  hr {
+    border-top: 1px solid #0095ff;
+  }
+}
+
 @media (max-width: 768px) {
   .dropdown {
     padding-left: 90px;

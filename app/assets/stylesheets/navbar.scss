@@ -171,25 +171,16 @@ a {
   border-radius: 50%;
 }
 
-.dropdown-menu {
-  text-align: center;
-  left: -50px;
-  margin-top: 18px;
-}
 
-
-#dropdownMenu2 {
-  color: black;
+#dropdownMenu2, .dropdown-item {
+  color: #0095ff;
   background-color: #ffffff;
   border-color: #ffffff;
-  border-radius: 50%;
-  width: 43px;
 
   &:hover,
   &:active{
-    border: 2px solid #fcaf17;
     background-color: #ffffff;
-    color: black;
+    color: #055792;
   }
 }
 

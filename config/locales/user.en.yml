@@ -1,0 +1,121 @@
+en:
+  admin:
+    user:
+      titles:
+        index: 'Users management'
+        new: 'Create user'
+        edit: 'Edit user'
+      actions:
+        add: 'Add user'
+        save: 'Save'
+      attributes: &user_attributes
+        name: 'Name'
+        email: 'Email'
+
+        price: 'Price'
+        role: 'Role'
+        phone: 'Phone'
+        country: 'Country'
+        city: 'City'
+        address: 'Address'
+        zip_code: 'Zip code'
+      roles: &user_roles
+        super: 'Super Admin'
+        admin: 'Admin'
+        standard: 'Standard'
+      flash_messages:
+        delete:
+          success: 'User successfully deleted'
+          danger: "User wasn't successfully deleted"
+        update:
+          success: 'User role successfully updated'
+          danger: "User role wasn't successfully updated"
+      nav_path:
+        user: 'Users management'
+        index: 'All users'
+        show: 'Show user'
+      messages:
+        no_address: 'No full address'
+    gender:
+      male: Male
+      female: Female
+
+
+  user:
+    attributes:
+      <<: *user_attributes
+      edit: 'Edit'
+      password_label: 'New password'
+      password_confirmation_label: 'Confirm your new password'
+    roles:
+      <<: *user_roles
+    titles:
+      edit: 'Edit User'
+      forgot_your_password: 'Forgot your password?'
+      change_your_password: 'Change your password'
+      resend_confirm_instructions: 'Resend confirmation instructions'
+    actions:
+      update: 'Update'
+      cancel_account: 'Cancel my account'
+      back: 'Back'
+      send_me: 'Send me reset password instructions'
+      change_my_password: 'Change my password'
+      resend_confirm_instructions: 'Resend confirmation instructions'
+    password:
+      character_minimum: '%{count} characters minimum'
+      password_hint: "leave it blank if you don't want to change it"
+      current_password_hint: 'we need your current password to confirm your changes'
+      unconfirmed_email: 'Currently waiting confirmation for: %{email}'
+
+  activerecord:
+    attributes:
+      user:
+        first_name: 'First Name'
+        last_name: 'Last Name'
+        email: 'Email'
+        password: 'Password'
+        password_confirmation: 'Confirm Password'
+        role: 'Role'
+        remember_me: 'Remember me'
+        current_password: 'Current password'
+        phone: 'Phone'
+        country_code: 'Country'
+        city: 'City'
+        address: 'Address'
+        zip_code: 'Zip code'
+        time_zone: 'Time Zone'
+    errors:
+      models:
+        user:
+          attributes:
+            first_name: &blanks
+              blank: "^can't be blank"
+            last_name:
+              <<: *blanks
+            email:
+              <<: *blanks
+              taken: 'is already taken'
+              invalid: '^Incorrect Email Address'
+            phone:
+              <<: *blanks
+            country_code:
+              <<: *blanks
+            city:
+              <<: *blanks
+            address:
+              <<: *blanks
+            zip_code:
+              <<: *blanks
+            password:
+              <<: *blanks
+              too_short: 'too short'
+              too_long: 'too long'
+            current_password:
+              <<: *blanks
+              invalid: '^wrong password'
+            password_confirmation:
+              confirmation: "^doesn't match Password"
+            role:
+              inclusion: "Value should be 'super', 'admin' or 'standard'"
+              update_another_role_to_super: 'Impossible to set a super role'
+              update_super_role_to_another: 'Impossible to change a super role'
