@@ -12,6 +12,7 @@ class User < ApplicationRecord
   has_many :posts
   has_many :comments
   has_many :likes
+  has_one_attached :avatar
 
   validates :first_name, :last_name, :role, :gender, presence: true
 

@@ -47,7 +47,7 @@ ru:
       resend_confirm_instructions: 'Отправить повторно инструкцию по восстановлению пароля'
     actions:
       update: 'Обновить'
-      cancel_account: 'Удалить мой аккаунт'
+      cancel_account: 'Удалить аккаунт'
       back: 'Назад'
       send_me: 'Отправить инструкцию по сбросу пароля'
       change_my_password: 'Изменить мой пароль'

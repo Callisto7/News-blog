@@ -82,6 +82,17 @@
   }
 }
 
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: #23527c;
+    text-decoration: underline;
+  }
+}
+
 .index-post  {
   .post {
     border-top: 1px solid #0095ff;
@@ -95,6 +106,8 @@
     .post-like {
       float: right;
     }
+
+
   }
 
   hr {
@@ -106,7 +119,7 @@
   .title {
     text-transform: uppercase;
     font-family: "Noto Sans Mono CJK JP Bold";
-    color: #5a5a5a;
+    color: #337ab7;
   }
 
   .actions {

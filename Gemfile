@@ -12,13 +12,19 @@ gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # gem 'bootstrap'
+
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
-gem 'font-awesome-rails'
-gem 'font-awesome-sass'
+
 gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
 gem 'rails-i18n'
+
+# aws service
+gem 'aws-sdk-s3', '~> 1'
+gem 'fog-aws'
+gem 'font-awesome-rails'
+gem 'font-awesome-sass', '~> 5.0.9'
 
 # paginate with bootstrap 4
 gem 'will_paginate-bootstrap4'

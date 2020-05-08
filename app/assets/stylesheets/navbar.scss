@@ -115,16 +115,6 @@
     text-decoration: none;
   }
 
-a {
-  color: #337ab7;
-  text-decoration: none;
-  &:hover,
-  &:focus {
-    color: #23527c;
-    text-decoration: underline;
-  }
-}
-
 .navbar-toggle {
   position: relative;
   float: right;
@@ -176,6 +166,15 @@ a {
   color: #0095ff;
   background-color: #ffffff;
   border-color: #ffffff;
+
+  img {
+    padding-bottom: 3px;
+  }
+
+  a {
+    color: #0095ff;
+    text-decoration: none;
+  }
 
   &:hover,
   &:active{

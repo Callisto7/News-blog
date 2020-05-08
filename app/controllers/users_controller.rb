@@ -9,15 +9,15 @@ def index
 
 end
 
-# def update
-#   @user = current_user
-#   if @user.update_attributes(current_user_params)
-#     flash[:notice] = "Saved.."
-#   else
-#     flash[:notice] = "Cannot update.."
-#   end
-#   redirect_to @user
-# end
+def update
+  @user = current_user
+  if @user.update_attributes(current_user_params)
+    flash[:notice] = "Saved.."
+  else
+    flash[:notice] = "Cannot update.."
+  end
+  redirect_to @user
+end
 
 
 
@@ -33,13 +33,14 @@ end
 #     end
 #   end
 # end
-#
-# private
-# def current_user_params
-#   params.require(:user).permit(:first_name,
-#                                :last_name,
-#                                :gender,
-#                                :email,
-#                                :password,
-#                                :password_confirmation)
-# end
+
+private
+def current_user_params
+  params.require(:user).permit(:first_name,
+                               :last_name,
+                               :gender,
+                               :email,
+                               :password,
+                               :password_confirmation,
+                               :avatar)
+end

@@ -69,6 +69,11 @@
     border-top: 1px solid #0095ff;
   }
 }
+.actions {
+  .new {
+    float: right;
+  }
+}
 
 @media (max-width: 768px) {
   .dropdown {
