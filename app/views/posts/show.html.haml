@@ -17,7 +17,8 @@
       = @post.likes.active_likes_count
 
   .actions
-    = link_to 'Редактировать', edit_post_path(@post), class: 'btn btn-primary'
+    - if current_user && (@post.user == current_user || current_user.admin?)
+      = link_to 'Редактировать', edit_post_path(@post), class: 'btn btn-primary'
     = link_to 'Назад', posts_path, class: 'btn btn-outline-dark'
 
 
