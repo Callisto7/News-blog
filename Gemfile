@@ -15,6 +15,7 @@ gem 'sass-rails', '~> 5.0'
 
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
+gem 'fancybox-rails'
 
 gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
