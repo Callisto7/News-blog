@@ -30,7 +30,7 @@
             = image_tag(asset_path('user.png'), class: 'icon')
             = current_user.name
           .dropdown-menu{ aria: { labelledby: 'dropdownMenu2' } }
-            = link_to users_path, class: 'dropdown-item' do
+            = link_to profile_path(current_user), class: 'dropdown-item' do
               = image_tag(asset_path('settings.png'), class: 'icon')
               = t('shared.navbar.my_account')
             - if current_user.admin?
@@ -44,4 +44,3 @@
           = link_to new_user_session_path, class: 'dropdown-item' do
             = image_tag(asset_path('sign-in.png'), class: 'icon')
             = t('shared.navbar.login')
-

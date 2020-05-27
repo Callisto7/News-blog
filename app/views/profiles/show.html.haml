@@ -17,6 +17,6 @@
         %p
           %strong #{t("user.attributes.#{g}")}:
           = t("user.gender.#{current_user.gender}")
-    .action
-      = link_to t('user.attributes.edit'), edit_user_registration_path, class: 'btn btn-primary'
+    .action.text-center
+      = link_to 'Редактировать', edit_user_registration_path, class: 'btn btn-primary'
       = link_to 'Предложить новость', new_post_path, class: 'new btn btn-outline-primary'

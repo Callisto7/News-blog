@@ -12,8 +12,6 @@ Rails.application.routes.draw do
     resource :likes, only: :update
   end
   resources :comments, only: [:create, :destroy]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get 'users/:id/show', to: 'users#show'
-  resources :users
   root 'posts#index'
+  get '/profiles/:id', to: 'profiles#show', as: 'profile'
 end
