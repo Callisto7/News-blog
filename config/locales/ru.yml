@@ -63,5 +63,6 @@ ru:
       navbar:
         admin_panel: 'Администрирование'
         my_account: 'Мой аккаунт'
+        my_posts: 'Мои новости'
         login: 'Войти'
         logout: 'Выйти'

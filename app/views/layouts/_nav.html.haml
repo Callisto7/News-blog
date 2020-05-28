@@ -33,6 +33,9 @@
             = link_to profile_path(current_user), class: 'dropdown-item' do
               = image_tag(asset_path('settings.png'), class: 'icon')
               = t('shared.navbar.my_account')
+            = link_to profiles_my_posts_path, class: 'dropdown-item' do
+              = image_tag(asset_path('my_news.png'), class: 'icon')
+              = t('shared.navbar.my_posts')
             - if current_user.admin?
               = link_to new_admin_user_session_path, class: 'dropdown-item' do
                 = image_tag(asset_path('admin.png'), class: 'icon')

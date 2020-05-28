@@ -2,9 +2,6 @@ ActiveAdmin.register Post do
   permit_params :user_id, :title, :text, :category
   menu label: "Новости"
 
-
-
-  #
   # or
   #
   # permit_params do
@@ -13,7 +10,7 @@ ActiveAdmin.register Post do
   #   permitted
   # end
 
-  index do
+  index :title => 'Новости' do
     selectable_column
     id_column
     column :user
@@ -37,7 +34,7 @@ ActiveAdmin.register Post do
   end
 
   show do
-    attributes_table do
+    attributes_table :title => 'Подробнее' do
       row 'Автор' do |post|
         post.user
       end
@@ -56,21 +53,21 @@ ActiveAdmin.register Post do
       row 'Категория' do |post|
         post.category
       end
-      row 'Фотография' do |post|
-        post.image
-      end
   end
   end
 
-  form do |f|
-    f.inputs "Создание поста" do
+  form :title => 'Добавить новость' do |f|
+    f.inputs do
       f.input :user, label: "Автор"
       f.input :title, label: "Заголовок"
       f.input :text, label: "Содержимое"
       f.input :category, label: "Категории"
       f.input :image, label: "Фотография"
     end
-    f.actions
+
+    f.actions do
+      f.action :submit, label: "Обновить Новость"
+      f.cancel_link({action: "show"})
+    end
   end
-  
 end

@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   end
   resources :comments, only: [:create, :destroy]
   root 'posts#index'
+  get 'profiles/my_posts'
   get '/profiles/:id', to: 'profiles#show', as: 'profile'
 end
