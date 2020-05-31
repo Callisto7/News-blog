@@ -67,7 +67,7 @@ ActiveAdmin.register Post do
 
     f.actions do
       f.action :submit, label: "Обновить Новость"
-      f.cancel_link({action: "show"})
+      f.cancel_link
     end
   end
 end

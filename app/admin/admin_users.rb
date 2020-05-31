@@ -24,7 +24,7 @@ ActiveAdmin.register AdminUser do
   end
 
   show do
-    attributes_table :title => 'Инормация о пользователе' do
+    attributes_table :title => 'Информация о пользователе' do
       row 'Email' do |admin_user|
         admin_user.email
       end
