@@ -18,5 +18,9 @@
           %strong #{t("user.attributes.#{g}")}:
           = t("user.gender.#{current_user.gender}")
     .action.text-center
-      = link_to 'Редактировать', edit_user_registration_path, class: 'btn btn-primary'
-      = link_to 'Предложить новость', new_post_path, class: 'new btn btn-outline-primary'
+      - if current_user.admin?
+        = link_to 'Редактировать', edit_user_registration_path, class: 'btn btn-primary'
+        = link_to 'Добавить новость', new_post_path, class: 'new btn btn-outline-primary'
+      -else
+        = link_to 'Редактировать', edit_user_registration_path, class: 'btn btn-primary'
+        = link_to 'Предложить новость', new_post_path, class: 'new btn btn-outline-primary'
