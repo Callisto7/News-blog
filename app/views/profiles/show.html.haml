@@ -5,7 +5,7 @@
     .mb-5
       %p
         %strong #{t('user.attributes.role')}:
-        %span.badge.badge-pill.badge-info
+        %span.badge.badge-pill.badge-primary
           %i.far.fa.fa-circle
           = t("user.roles.#{current_user.role}")
       - %w[email].each do |attr|
